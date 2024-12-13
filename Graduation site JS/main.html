@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's graduation time!</title>
+    <link rel="icon" href="https://img.freepik.com/premium-psd/javascript-button-icon-3d-render_568120-2038.jpg">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Honk&family=Nabla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+body{
+    background-image: url(https://sotni.ru/wp-content/uploads/2023/08/abstraktsiia-minimalizm-42.webp);
+  background-size: cover;
+}
+header{
+  height: 300px;
+  color: green;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+nav,aside{
+  width: 20%;
+  background: linear-gradient(45deg, red, yellow, magenta);
+  float: left;
+  text-align: center;
+  border-radius: 5%;
+}
+.bgvideo{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bgvideo video{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+main{
+  width: 60%;
+  float: left;
+  text-align: center;
+  background: linear-gradient(45deg, yellow, purple, red);
+  color: lime;
+  border-radius: 5%;
+}
+h1{ 
+color: red;
+z-index: -2px;
+font-size: 7vw;
+font-family: Honk;
+text-align: center;
+animation-name: shake;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+}
+@keyframes shake{
+  0%{
+      font-size: 5vw;
+  }
+  50%{
+      font-size: 6vw;
+  }
+  100%{
+      font-size: 5vw;
+  }
+}
+h2{
+  color: red;
+  font-family: Honk;
+  font-size: 50px;
+}
+h3{
+    font-family: Bahnschrift;
+    font-size: 50px;
+    color: crimson;
+}
+p{
+    border-radius: 5px;
+  border: dashed 5px red;
+  color: purple;
+  font-family: Bahnschrift;
+  font-size: 24px;
+  background-color: orange;
+}
+footer{
+  background-color: none;
+  height: 500px;
+  font-family: Honk;
+  clear: both;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-align: center;
+  align-items: center;
+  font-family: Honk;
+  display: block;
+  background-color: none;
+  font-size: 50px;
+  text-decoration: none;
+}
+a:visited{
+  color: blue;
+}
+@media only screen and (max-width:800px){
+nav,main,aside,header,.mc{
+  width: 100%;
+}
+}
+/* CSS */
+.button-73 {
+appearance: none;
+background-color: #FFFFFF;
+border-radius: 40em;
+font-family: Bahnschrift;
+border-style: none;
+box-shadow: #ADCFFF 0 -12px 6px inset;
+box-sizing: border-box;
+color: #000000;
+cursor: pointer;
+display: inline-block;
+font-family: -apple-system,sans-serif;
+font-size: 1.2rem;
+font-weight: 700;
+letter-spacing: -.24px;
+margin: 0;
+outline: none;
+padding: 1rem 1.3rem;
+quotes: auto;
+text-align: center;
+text-decoration: none;
+transition: all .15s;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+width: 80%;
+margin-left: 10%;
+}
+
+.button-73:hover {
+background-color: blue;
+box-shadow:darkblue 0 -6px 8px inset;
+transform: scale(1.125);
+}
+
+.button-73:active {
+transform: scale(1.025);
+}
+
+@media (min-width: 768px) {
+.button-73 {
+  font-size: 1.5rem;
+  padding: .75rem 2rem;
+}
+}
+.mario{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  text-decoration: none;
+  font-family: Bahnschrift;
+  margin-bottom: 50px;
+}
+.mario:hover{
+  text-decoration: underline;
+}
+#me{
+  font-size: 50px;
+  font-family: Bahnschrift;
+}
+#r{
+  margin-top: 50px;
+background: linear-gradient(blue 50%, yellow 50%);
+border-radius: 30%;
+color: red;
+font-family: Bahnschrift;
+}
+#t{
+  background: linear-gradient(blue 50%, yellow 50%);
+border-radius: 30%;
+color: red;
+font-family: Bahnschrift;
+}
+#mer{
+/* animation properties */
+animation-name: my-animation;
+animation-duration: 2s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+animation-timing-function: linear;
+
+/* other properties */
+width: 300px;
+height: 100px;
+border-radius: 10px;
+font-size: 45px;
+margin-bottom: 15px;
+left: 0; 
+right: 0; 
+margin-left: auto;
+margin-right: auto; 
+
+}
+
+@keyframes my-animation {
+from {
+  background-color: red;
+  width: 300px;
+  top: 10px;
+}
+to {
+  background-color: yellow;
+  width: 50px;
+  top: 100px;
+}
+}
+img{
+    width: 450px;
+    height: 600px;
+    border: double 5px greenyellow;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>It's graduation time! ;)</h1>
+    </header>
+    <main>
+        <section id="Am">
+            <h2>About me</h2>
+            <p>Мене звати Максим. Мені 12 років. Я з Харкова. Живу та навчаюся у Києві. Захоплююся баскетболом та вебдизайном. Вчуся у Ліцеї №30 "ЕКОНАД" м.Києва. Вивчаю мови англійську, грецьку та німецьку. Люблю подорожувати, займатися риболовлею, плавати, програмувати та читати. Живу у Україні, Київ. Мрію про перемогу України та вступ до Євросоюзу та НАТО.</p>
+        </section>
+        <section>
+            <img src="img/me.jpg">
+        </section>
+    </main>
+    <nav>
+        <h2>Navigation</h2>
+        <a href="#Am"><button style="margin-bottom: 10px; 
+            display:block;" class="button-73" role="button">Про мене
+            </button></a>
+            <a href="#site"><button style="margin-bottom: 10px; 
+                display:block;" class="button-73" role="button">Минула випускна робота
+                </button></a>
+    </nav>
+    <aside>
+        <h2>JavaScript!!!!</h2>
+        <a href="pr.html"><button style="margin-bottom: 10px; 
+            display:block;" class="button-73" role="button">Площа, периметр прямокутника
+            </button></a>
+            <a href="pr2.html"><button style="margin-bottom: 10px; 
+                display:block;" class="button-73" role="button">Площа, периметр трикутника
+                </button></a>
+                <a href="pr3.html"><button style="margin-bottom: 10px; 
+                    display:block;" class="button-73" role="button">"Acengers"
+                    </button></a>
+                    <a href="pr4.html"><button style="margin-bottom: 10px; 
+                      display:block;" class="button-73" role="button">Рік першого польоту у космос
+                      </button></a>
+                      <a href="pr5.html"><button style="margin-bottom: 10px; 
+                        display:block;" class="button-73" role="button">Дискримінант
+                        </button></a>
+                        <a href="pr6.html"><button style="margin-bottom: 10px; 
+                          display:block;" class="button-73" role="button">Логін та пароль
+                          </button></a>
+                          <a href="pr7.html"><button style="margin-bottom: 10px; 
+                            display:block;" class="button-73" role="button">Мій банкомат
+                            </button></a>
+                            <a href="pr8.html"><button style="margin-bottom: 10px; 
+                              display:block;" class="button-73" role="button">Скільки тобі років?
+                              </button></a>
+                              <a href="pr9.html"><button style="margin-bottom: 10px; 
+                                display:block;" class="button-73" role="button">Marks
+                                </button></a>
+                                <a href="pr10.html"><button style="margin-bottom: 10px; 
+                                  display:block;" class="button-73" role="button">Яка твоя пора року?
+                                  </button></a>
+                                  <a href="pr11.html"><button style="margin-bottom: 10px; 
+                                    display:block;" class="button-73" role="button">Emoji
+                                    </button></a>
+                                    <a href="pr12.html"><button style="margin-bottom: 10px; 
+                                      display:block;" class="button-73" role="button">Glory to Ukraine!
+                                      </button></a>
+                                      <a href="pr13.html"><button style="margin-bottom: 10px; 
+                                        display:block;" class="button-73" role="button">Факторіал
+                                        </button></a>
+                                        <a href="pr14.html"><button style="margin-bottom: 10px; 
+                                          display:block;" class="button-73" role="button">Таблиця множення
+                                          </button></a>
+                                          <a href="dinosaur.html"><button style="margin-bottom: 10px; 
+                                            display:block;" class="button-73" role="button">Dino
+                                            </button></a>
+                                              <a href="pr17.html"><button style="margin-bottom: 10px; 
+                                                display:block;" class="button-73" role="button">Алфавіт
+                                                </button></a>
+                                                <a href="pr18.html"><button style="margin-bottom: 10px; 
+                                                  display:block;" class="button-73" role="button">Компліменти
+                                                  </button></a>
+                                                  <a href="pr19.html"><button style="margin-bottom: 10px; 
+                                                    display:block;" class="button-73" role="button">Chessboard
+                                                    </button></a>
+                                                    <a href="pr20.html"><button style="margin-bottom: 10px; 
+                                                      display:block;" class="button-73" role="button">Круги
+                                                      </button></a>
+                                                      <a href="pr21.html"><button style="margin-bottom: 10px; 
+                                                        display:block;" class="button-73" role="button">Гра "Вгадай число!"
+                                                        </button></a>
+                                                        <a href="pr22.html"><button style="margin-bottom: 10px; 
+                                                          display:block;" class="button-73" role="button">Цифри в числі
+                                                          </button></a>
+                                                          <a href="pr23.html"><button style="margin-bottom: 10px; 
+                                                            display:block;" class="button-73" role="button">Мій перший калькулятор
+                                                            </button></a>
+                                                            <a href="pr24.html"><button style="margin-bottom: 10px; 
+                                                              display:block;" class="button-73" role="button">What time is it?
+                                                              </button></a>
+                                                              <a href="pr25.html"><button style="margin-bottom: 10px; 
+                                                                display:block;" class="button-73" role="button">Фібоначі
+                                                                </button></a>
+                                                                <a href="pr26.html"><button style="margin-bottom: 10px; 
+                                                                  display:block;" class="button-73" role="button">Степінь чисел
+                                                                  </button></a>
+                                                                  <a href="pr27.html"><button style="margin-bottom: 10px; 
+                                                                    display:block;" class="button-73" role="button">Столиці, населення та зміна кольору фону
+                                                                    </button></a>
+                                                                    <a href="pr28.html"><button style="margin-bottom: 10px; 
+                                                                      display:block;" class="button-73" role="button">Поїзд їде
+                                                                      </button></a>
+                                                                      <a href="pr29.html"><button style="margin-bottom: 10px; 
+                                                                        display:block;" class="button-73" role="button">Анімація (змінення) тексту
+                                                                        </button></a>
+    </aside>
+    <footer>
+<h2>My last graduation site</h2>
+        <a href="https://fantasy-me.github.io/mypersonalgraduationsite1/" id="site"><button style="margin-bottom: 10px; 
+            display:block;" class="button-73" role="button">Випускний сайт HTML
+            </button></a>
+    </footer>
+</body>
+</html>

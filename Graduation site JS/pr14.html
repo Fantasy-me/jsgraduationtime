@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця множення</title>
+    <style>
+        div{
+			font-size: 40px; 
+			color: darkred;
+			text-align: center;
+            background-color: burlywood;
+            opacity: .7;
+            border-radius: 5px;
+            width: 30%;
+            margin-top: 225px;
+            margin-left: 500px;
+		}
+		.input{
+			width: 75px;
+			height: 30px;
+            border-radius: 5px;
+            border: 5px double brown;
+            background-color: yellow;
+			font-size: 24px;
+			text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: maroon;
+		}
+        .tabscreen {
+  font-family: 'Times New Roman', Times, serif;
+  color: lightblue;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 5px double #fafafa;
+  background: midnightblue;
+  margin: 35px 0;	
+width: 400px;
+height: 45px;
+font-size: 24px;
+}
+        body{
+          background: url(https://img.freepik.com/free-vector/gradient-purple-color-background-modern-wave-abstract-designs_343694-2361.jpg);
+          background-size: cover;
+        }
+</style>
+</head>
+<body>
+    <script>
+        function table(){
+            let number=+document.finish.plural.value;
+            let answer=document.getElementById("pass")
+            let string= ""
+        for(let i = 1; i <=10; i++){
+            string+=(`<tr> <td> <p> ${number} * ${i} = ${number * i} </p> </td> </tr>`)
+        }
+        answer.innerHTML=string
+        }
+        
+    </script>
+        <div>
+            <p>Введіть число (не десяткове)</p>
+            <form name="finish" action="javascript:table()">
+             <input class="input" name="plural" type="text" value="3" size="4">
+            <input class="tabscreen" type="submit" value="Ввести">
+            </form>
+             <span id="pass"></span>
+            </div>
+</body>
+</html>

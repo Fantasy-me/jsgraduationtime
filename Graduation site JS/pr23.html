@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            background: #282c34;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #calculator {
+            background: #3b3f4f;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 450px;
+        }
+        #display {
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background: #44485a;
+            color: white;
+        }
+        .button {
+            width: 70px;
+            height: 70px;
+            font-size: 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #5a5e72;
+            color: white;
+            transition: 0.3s ease;
+        }
+        .button:hover {
+            background: #6f7392;
+        }
+        .button:active {
+            background: #4a4e64;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <input type="text" id="display" readonly>
+        <div class="grid">
+            <button class="button" onclick="appendValue('7')">7</button>
+            <button class="button" onclick="appendValue('8')">8</button>
+            <button class="button" onclick="appendValue('9')">9</button>
+            <button class="button" onclick="setOperator('/')">÷</button>
+            <button class="button" onclick="appendValue('4')">4</button>
+            <button class="button" onclick="appendValue('5')">5</button>
+            <button class="button" onclick="appendValue('6')">6</button>
+            <button class="button" onclick="setOperator('*')">×</button>
+            <button class="button" onclick="appendValue('1')">1</button>
+            <button class="button" onclick="appendValue('2')">2</button>
+            <button class="button" onclick="appendValue('3')">3</button>
+            <button class="button" onclick="setOperator('-')">−</button>
+            <button class="button" onclick="appendValue('0')">0</button>
+            <button class="button" onclick="appendValue('.')">.</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="setOperator('+')">+</button>
+            <button class="button" style="grid-column: span 4;" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let currentValue = '';
+        let operator = '';
+        let firstValue = '';
+
+        function appendValue(value) {
+            currentValue += value;
+            updateDisplay(currentValue);
+        }
+
+        function setOperator(op) {
+            if (currentValue === '') return;
+            if (firstValue === '') {
+                firstValue = currentValue;
+                operator = op;
+                currentValue = '';
+                updateDisplay('');
+            }
+        }
+
+        function clearDisplay() {
+            currentValue = '';
+            operator = '';
+            firstValue = '';
+            updateDisplay('');
+        }
+
+        function calculate() {
+            if (currentValue === '' || firstValue === '' || operator === '') return;
+            const num1 = parseFloat(firstValue);
+            const num2 = parseFloat(currentValue);
+            let result = 0;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num2 !== 0 ? num1 / num2 : 'Error';
+                    break;
+                default:
+                    result = 'Error';
+            }
+
+            updateDisplay(result);
+            firstValue = result.toString();
+            currentValue = '';
+            operator = '';
+        }
+
+        function updateDisplay(value) {
+            document.getElementById('display').value = value;
+        }
+    </script>
+</body>
+</html>

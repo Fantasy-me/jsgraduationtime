@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой фільму "Acengers"</title>
+    <style>
+           		div{
+			font-size: 40px; 
+			color: darkred;
+			text-align: center;
+            background-color: burlywood;
+            opacity: .7;
+            border-radius: 5px;
+            width: 30%;
+            margin-top: 225px;
+            margin-left: 500px;
+		}
+		.input{
+			width: 300px;
+			height: 30px;
+            border-radius: 5px;
+            border: 5px double brown;
+            background-color: yellow;
+			font-size: 24px;
+			text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: maroon;
+		}
+        .tabscreen {
+  font-family: 'Times New Roman', Times, serif;
+  color: lightblue;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 5px double #fafafa;
+  background: midnightblue;
+  margin: 35px 0;	
+width: 180px;
+height: 45px;
+font-size: 24px;
+}
+        body{
+          background: url(https://img.freepik.com/free-vector/gradient-purple-color-background-modern-wave-abstract-designs_343694-2361.jpg);
+          background-size: cover;
+        }
+    </style>
+</head>
+<body>
+  <script>
+    function actor(){
+    let characterName=document.forms.question.value;
+    let answering = document.getElementById('actor')
+    if(characterName=='Роберт Дауні(молодший)'){
+      string=('Це правильна відповідь!!!!!! Вітаю!!!!!!!')
+    }
+    else if(characterName!='Роберт Дауні(молодший)'){
+      string=('Ви не вгадали, спробуйте ще раз!')
+    }
+    answering.innerHTML = string;
+  }
+
+  </script>  
+   <div>
+    <p>Як звати актора, який грав Джона Старка у фільмі "Месники"?</p>
+    <form name="forms" action="javascript:actor()">
+    <input class="input" name="question" type="text" value="Роберт Дауні(молодший)" size="10">
+    <input class="tabscreen" type="submit" value="Перевірити">
+    </form>
+    <span id="actor"></span>
+    </div>
+</body>
+</html>

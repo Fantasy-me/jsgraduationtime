@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+        #animation {
+          position: relative;
+          cursor: pointer;
+        }
+        body{
+            background: linear-gradient(yellow, orange);
+            background-size: 1500px 1000px;
+        }
+        h1{
+            font-family: Honk;
+        }
+      </style>
+    
+</head>
+<body>
+    <h1>Click on train!</h1>
+    <img id="animation" src="https://hypixel.net/attachments/hype-train-cult-gif.2609132/" style="width: 300px;height: 300px;">
+
+<script>
+    animation.onclick = function() {
+     let start = Date.now(); // зберегти час початку
+	let timer = setInterval(function() {
+        // обчислити скільки часу пройшло з opts.duration
+        let timePassed = Date.now() - start;
+        animation.style.left = timePassed / 5 + 'px';
+        if (timePassed > 2000) clearInterval(timer);
+      }, 20);
+    }
+//https://i.gifer.com/origin/98/989bc039ef46fef7a842457bd8f510a5_w200.gif
+</script>
+
+</body>
+</html>

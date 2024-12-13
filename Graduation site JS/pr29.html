@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Animation</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+        body{
+            background: linear-gradient(yellow, orange);
+            background-size: 1500px 1000px;
+        }
+    
+    #animatedText {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-top: 20%;
+      transition: all 0.5s ease;
+      font-family: Honk;
+    }
+  </style>
+</head>
+<body>
+  <div id="animatedText">Hello everybody!</div>
+  <script>
+    const phrases = [
+  "Welcome to my website!",
+  "Let's learn JavaScript!",
+  "Coding is fun!",
+  "Create amazing projects!",
+  "Enjoy the process!"
+];
+
+const textElement = document.getElementById("animatedText");
+let index = 0;
+
+function animateText() {
+  textElement.style.opacity = 0; //Зникання
+  setTimeout(() => {
+    textElement.textContent = phrases[index];//Змінення тексту
+    textElement.style.opacity = 1; //Повернення
+    index = (index + 1) % phrases.length; //Наступний текст
+  }, 500);
+}
+
+setInterval(animateText, 2000); // Анімація проводиться кожні 2 секунди
+  </script>
+</body>
+</html>

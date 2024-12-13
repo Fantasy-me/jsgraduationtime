@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/capitals.css">
+    <title>Столиці</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+        body{
+            background: linear-gradient(yellow, orange);
+            background-size: 1500px 1000px;
+        }
+        td,th{
+           font-size: 25px;
+           font-family: Honk;
+        }
+        .button{
+            width: 300px;
+            height: 100px;
+            background: linear-gradient(90deg, red, orange, yellow, green, aqua, blue, purple);
+            border: 5px solid black;
+            font-size: 35px;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+ let capitals = {
+  "London": 8982000,
+  "Washington": 705000,
+  "Ottawa": 934000,
+  "Seoul": 9776000,
+  "Mexico City": 9209944,
+  "Brasília": 3055149,
+  "Kabul": 3945700,
+  "Tehran": 8796000,
+  "Caracas": 1943900,
+  "Buenos Aires": 3075646
+};
+
+  let capitalEntries = Object.entries(capitals);
+
+  capitalEntries.sort((a, b) => a[0].localeCompare(b[0]));
+
+  let htmlStringTable1 = "<table><tr><th></th><th>Capitals</th></tr>";
+
+  for (let entry of capitalEntries) {
+    htmlStringTable1 += `<tr><td>${entry[0]}</td><td>${entry[1]}</td></tr>`;
+  }
+
+  htmlStringTable1 += "</table>";
+
+  capitalEntries.sort((a, b) => b[1] - a[1]);
+
+  let htmlStringTable2 = "<table><tr><th></th><th>Population</th></tr>";
+    for (let entry of capitalEntries) {
+    htmlStringTable2 += `<tr><td>${entry[0]}</td><td>${entry[1]}</td></tr>`;
+  }
+
+
+  htmlStringTable2 += "</table>";
+
+  document.body.innerHTML = htmlStringTable1 + htmlStringTable2;
+      </script>
+      <button id='button' class="button">Змінити фон</button>
+      <script>
+        const button = document.getElementById('button');
+        const colors = [
+            "Red", "Green", "Blue", "Yellow", "Magenta", 
+            "Cyan", "Pink", "Orange", "Purple", "Brown", 
+            "Violet", "Indigo", "Lime", "Teal", "Olive", 
+            "Maroon", "Coral", "Turquoise", "Gold", "Silver", 
+            "Plum", "Khaki", "Beige", "Lavender", "Mauve", 
+            "Peach", "Aqua", "Chartreuse", "Crimson", "Fuchsia", 
+            "Mint", "Rose", "Tan", "Scarlet", "Ivory", 
+            "Azure", "LavenderBlush", "Sienna", "Navy", "Copper", 
+            "Grape", "Emerald", "Slate", "Amber"
+        ]
+        
+        
+        function changeBackground(){
+            document.body.style.background = colors[Math.floor(colors.length * Math.random())];
+            
+        }
+        
+        button.addEventListener('click', changeBackground);
+        </script>
+        
+</body>
+</html>

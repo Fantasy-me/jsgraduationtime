@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компліменти</title>
+    <style>
+               div{
+			font-size: 40px; 
+			color: darkred;
+			text-align: center;
+            background-color: burlywood;
+            opacity: .7;
+            border-radius: 5px;
+            width: 30%;
+            margin-top: 225px;
+            margin-left: 500px;
+		}
+		.input{
+			width: 280px;
+			height: 30px;
+            border-radius: 5px;
+            border: 5px double brown;
+            background-color: yellow;
+			font-size: 24px;
+			text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: maroon;
+		}
+        .tabscreen {
+  font-family: 'Times New Roman', Times, serif;
+  color: lightblue;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 5px double #fafafa;
+  background: midnightblue;
+  margin: 35px 0;	
+width: 400px;
+height: 45px;
+font-size: 24px;
+}
+        body{
+          background: url(https://img.freepik.com/free-vector/gradient-purple-color-background-modern-wave-abstract-designs_343694-2361.jpg);
+          background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script>
+function compliments(){
+    let compliments=['smart','clever','nice','polite','generous','amazing','awesome','gorgeous','attractive','kind','creative','genius','fabous','hard-working']
+let animals=['cat','dog','hamster','fox','bear','lizard','wolf','goldfish','snake','parrot','elephant','giraffe','frog','crow','crow']
+let colors=['red', 'orange', 'yellow', 'green', 'blue', 'indigo','maroon']
+let number=+document.finish.x.value;
+let answer=document.getElementById("pass")
+let string=""
+for(let i=1;i<=number;i++){
+    let rand1=Math.floor(Math.random()*compliments.length)
+    let rand2=Math.floor(Math.random()*animals.length)
+    let rand3=Math.floor(Math.random()*colors.length)
+    let rand4=Math.floor(Math.random()*colors.length)
+    string+=(`<p style="color:${colors[rand3]}; backgroung-color:${colors[rand3]};">${i} You are so <span style="color:${colors[rand3]};">${compliments[rand1]} as ${animals[rand2]}</span></p><br>`)
+}
+function findValue(array, value) {
+    let index = array.indexOf(value);
+}
+answer.innerHTML=string
+}
+
+
+    </script>
+          <div>
+            <p>Введіть кількість компліментів</p>
+            <form name="finish" action="javascript:compliments()">
+             <input class="input" name="x" type="text" value="" size="4">
+            <input class="tabscreen" type="submit" value="Ввести">
+            </form>
+             <span id="pass"></span>
+            </div>
+</body>

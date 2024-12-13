@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фібоначчі</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+        body, html {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          font-family: 'Honk', sans-serif;
+          min-height: 100vh;
+            background: linear-gradient(45deg, orange, red);
+            color: #fff;
+        }
+        
+        .button {
+            background-color: lightyellow; 
+            color: rgb(0, 0, 0);
+            font-size: 30px; 
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: Honk;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p style="font-weight: 1000; font-size: 60px; margin-bottom: 15px;">The Fibonachi</p>
+        <input style=" font-size: 30px" id="fibInput" type="number" value="10" size="4" >
+        <button onclick="calculateFibonachi()" class="button">Submit</button>
+        <button onclick="clearResults()" class="button">Clear</button>
+        <p  style=" font-size: 30px" id="fibResult">Result: </p>
+    </div>
+
+    <script>
+        function fibonachiSequence(n) {
+          let fib = [1, 1];
+          for (let i = 2; i < n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+          }
+          return fib;
+        }
+
+        function printFibonachiSequence(sequence) {
+          let table = "<table border='1'>";
+          for (let i = 0; i < sequence.length; i++) {
+            table += "<tr><td>" + (i + 1) + "</td><td>" + sequence[i] + "</td></tr>";
+          }
+          table += "</table>";
+          return table;
+        }
+
+        function calculateFibonachi() {
+          let input = document.getElementById('fibInput');
+          let n = parseInt(input.value);
+          let result = fibonachiSequence(n);
+          let output = document.getElementById('fibResult');
+          output.innerHTML = 'Result: <br>' + printFibonachiSequence(result);
+        }
+
+        function clearResults() {
+          let output = document.getElementById('fibResult');
+          output.innerHTML = 'Result: ';
+        }
+    </script>
+</body>
+</html>
